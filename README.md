@@ -1,6 +1,6 @@
 # gardener
 
-[![CI](https://github.com/hailneed/gardener/actions/workflows/ci.yml/badge.svg)](https://github.com/hailneed/gardener/actions/workflows/ci.yml)
+[![CI](https://github.com/halilneed/gardener/actions/workflows/ci.yml/badge.svg)](https://github.com/halilneed/gardener/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](#requirements)
 
@@ -10,7 +10,7 @@
 >
 > No network calls. No API key. No quota. It never writes to your instruction files.
 
-**Site:** https://hailneed.github.io/gardener/ · *Türkçe açıklama aşağıda.*
+**Site:** https://halilneed.github.io/gardener/ · *Türkçe açıklama aşağıda.*
 
 Your instruction file is the most expensive text in the repo: every line is paid for not
 once but on **every single request**. Yet nobody maintains it. It grows, it contradicts
@@ -20,7 +20,7 @@ being followed.
 ## What it looks like
 
 ```
-$ npx --yes github:hailneed/gardener --audit --repo . --md
+$ npx --yes github:halilneed/gardener --audit --repo . --md
 ```
 
 ```markdown
@@ -78,7 +78,7 @@ Only text loaded on **every request**:
 - everything they pull in with `@path`, **transitively**
 
 **Out of scope:** skill bodies and `references/` files. Those load on demand; measuring
-them is [`skillbench`](https://github.com/hailneed/skillbench)'s job. Conflating the two
+them is [`skillbench`](https://github.com/halilneed/skillbench)'s job. Conflating the two
 would make a large skill library look like a context problem.
 
 Import resolution is real work: one file pulls another, which pulls another. The report
@@ -129,7 +129,7 @@ byte-identical in the data, and the skill is obliged to separate them:
 
 ```
 # Inside Claude Code, once:
-/plugin marketplace add hailneed/plugins
+/plugin marketplace add halilneed/plugins
 /plugin install gardener@hailneed
 ```
 
@@ -146,7 +146,7 @@ Claude Code + Node.js 18+. No dependencies, no API key.
 ## Without the plugin
 
 ```
-git clone https://github.com/hailneed/gardener
+git clone https://github.com/halilneed/gardener
 cd gardener
 
 node scripts/gardener.mjs --audit --repo ../my-project --md
@@ -165,7 +165,7 @@ is `max-tokens` — instruction files grow quietly and the cost is paid on every
 a number that fails the PR is the only practical way to keep that visible:
 
 ```yaml
-- uses: hailneed/gardener@main
+- uses: halilneed/gardener@main
   with:
     max-tokens: 4000      # fail if the hot context grows past this
     fail-on: error        # error | warn | info | never
@@ -189,7 +189,7 @@ token total, and a bloated file can carry no findings at all. Outputs: `score` �
 `tokens` · `lines` · `files` · `findings` · `errors` · `json`.
 
 ```yaml
-- uses: hailneed/gardener@main
+- uses: halilneed/gardener@main
   id: hot
   with:
     fail-on: never        # report, do not block
@@ -225,10 +225,10 @@ so a typo fails the job instead of passing silently.
 - **Gardener Cloud (paid, optional):** continuous budget tracking for team instruction
   files, before/after comparison of what a rule change did to behaviour, and a
   "rules that actually apply in this repo" summary for new joiners. The plugin stays free.
-  Waitlist: https://hailneed.github.io/gardener/#cloud
+  Waitlist: https://halilneed.github.io/gardener/#cloud
 
 This repo is part of the `agentlens` family: the adapter layer is shared with
-[`agent-blackbox`](https://github.com/hailneed/agent-blackbox), where the canonical copy lives.
+[`agent-blackbox`](https://github.com/halilneed/agent-blackbox), where the canonical copy lives.
 
 ## License
 
@@ -264,6 +264,6 @@ node scripts/gardener.mjs --audit --repo . --md --lang tr
 ```
 
 ```
-/plugin marketplace add hailneed/plugins
+/plugin marketplace add halilneed/plugins
 /plugin install gardener@hailneed
 ```

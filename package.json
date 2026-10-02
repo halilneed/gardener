@@ -32,15 +32,15 @@
   ],
   "author": {
     "name": "Halil Ataş",
-    "url": "https://github.com/hailneed"
+    "url": "https://github.com/halilneed"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hailneed/gardener.git"
+    "url": "git+https://github.com/halilneed/gardener.git"
   },
-  "homepage": "https://hailneed.github.io/gardener/",
+  "homepage": "https://halilneed.github.io/gardener/",
   "bugs": {
-    "url": "https://github.com/hailneed/gardener/issues"
+    "url": "https://github.com/halilneed/gardener/issues"
   },
   "license": "MIT"
 }
